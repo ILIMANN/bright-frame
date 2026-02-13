@@ -18,5 +18,18 @@ namespace BrightFrame.UI
         {
             // This is where we will start the Hotkey Service later
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            OverlayForm overlay = new OverlayForm();
+            this.Hide();
+
+            if (overlay.ShowDialog() == DialogResult.OK)
+            {
+                this.Close();
+            }
+
+            
+        }
     }
 }

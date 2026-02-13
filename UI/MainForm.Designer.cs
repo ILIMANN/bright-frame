@@ -28,24 +28,39 @@
         /// </summary>
         private void InitializeComponent()
         {
+            button1 = new Button();
             SuspendLayout();
+            // 
+            // button1
+            // 
+            button1.BackColor = Color.Gray;
+            button1.Location = new Point(-1, 0);
+            button1.Name = "button1";
+            button1.Size = new Size(320, 40);
+            button1.TabIndex = 0;
+            button1.Text = "Regional Screenshot";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(800, 450);
-            Cursor = Cursors.Cross;
+            ClientSize = new Size(320, 200);
+            Controls.Add(button1);
+            Cursor = Cursors.Default;
             FormBorderStyle = FormBorderStyle.None;
+            MaximumSize = new Size(640, 400);
+            MinimumSize = new Size(320, 200);
             Name = "MainForm";
-            Opacity = 0.5D;
             Text = "MainForm";
-            WindowState = FormWindowState.Maximized;
             Load += MainForm_Load;
             ResumeLayout(false);
         }
 
         #endregion
+
+        private Button button1;
     }
 }
