@@ -15,7 +15,6 @@ namespace BrightFrame.UI
         private Point startPoint;
         private Rectangle selectionArea;
 
-        ScreenCapture screenCapture = new ScreenCapture();
         public OverlayForm()
         {
             InitializeComponent();
@@ -54,11 +53,15 @@ namespace BrightFrame.UI
             if (e.Button == MouseButtons.Left)
             {
                 isDrawing = false;
+                this.Hide();
 
-                screenCapture.RegionalScreenCapture(selectionArea);
+                ScreenCapture.RegionalScreenCapture(selectionArea);
 
                 this.DialogResult = DialogResult.OK;
+
                 this.Close();
+
+
             }
         }
 
